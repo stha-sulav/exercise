@@ -13,6 +13,10 @@ app.use(express.urlencoded({ extended: true }));
 const workoutRoutes = require("./routes/workout.route");
 app.use("/api/workouts", workoutRoutes);
 
+//user routes
+const userRoutes = require("./routes/user.route");
+app.use("/api/user", userRoutes);
+
 //connect ot database
 connectDb()
   .then(() => {
